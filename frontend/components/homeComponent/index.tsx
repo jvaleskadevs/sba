@@ -111,7 +111,7 @@ export default function HomeComponent() {
     try { 
       const ERC6551Registry = 
         "0x34e1408B9B047fE12a1B0C655B2D58775AcF579A";
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const provider = new ethers.providers.Web3Provider((window as any).ethereum);
       const signer = await provider.getSigner();
       const ercRegistry6551 = new ethers.Contract(
         ERC6551Registry, ERC6551RegistryABI, signer
@@ -156,7 +156,7 @@ export default function HomeComponent() {
     const NFT_MINTABLE = // J. Valeska NFT Collection
       "0x6008dBE25d0a7fC93eD0D514a878d2dE98d0b5D2";
     const nftMintableIface = getNftMintableInterface(); 
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const provider = new ethers.providers.Web3Provider((window as any).ethereum);
     const signer = await provider.getSigner();
     const sba = new ethers.Contract(
       SBA, SBAABI, signer
@@ -189,7 +189,7 @@ export default function HomeComponent() {
   const buyMoreCredits = async () => {
     if (!SBA) return;
 
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const provider = new ethers.providers.Web3Provider((window as any).ethereum);
     const signer = await provider.getSigner();
     const SBAManagerAddress = outflow.metadata?.token_symbol === 'CELOx' 
       ? "0x7Dc01c36d8fd3e8104f818091D90F74710AEac2f"  // CELOx SBAM
@@ -233,7 +233,7 @@ export default function HomeComponent() {
   const spendSomeCredits = async () => {
     if (!SBA) return;
 
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const provider = new ethers.providers.Web3Provider((window as any).ethereum);
     const signer = await provider.getSigner();
     const sba = new ethers.Contract(
       SBA, SBAABI, signer
