@@ -13,7 +13,7 @@ import styles from "./homeComponent.module.css";
 
 export default function HomeComponent() {
   const [SBA, setSBA] = useState<string>('');
-  const [outflow, setOutflow] = useState<object|null>(null);
+  const [outflow, setOutflow] = useState<any|null>(null);
   const [creditsBalance, setCreditsBalance] = useState<string>('0');
   const { data: walletClient } = useWalletClient();
   const { address } = useAccount();
