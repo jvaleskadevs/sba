@@ -25,8 +25,8 @@ export async function POST(req: Request) {
     const data = await resp.json();
     console.log(data);
 
-		const formattedNfts = data.map((nft) => {
-			return nft.metadata.map((meta) => {
+		const formattedNfts = data.map((nft: any) => {
+			return nft.metadata.map((meta: any) => {
 			  console.log(meta);
 			  return {
 				  contract: nft.contractAddress,
