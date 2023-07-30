@@ -19,13 +19,13 @@ export default function HomeComponent() {
   const { address } = useAccount();
   const { open, setOpen } = useModal();
   
-  const setOpen_ = (open: boolean) => {
-    return setOpen();
+  const setOpen_ = (_: boolean) => {
+    return setOpen(!open);
   }
   
   const walletManager = useMemo(() => ({
     isOpen: open,
-    open: setOpen_(true)
+    open: setOpen_
   }), [open, setOpen]); 
 
   const fetchNfts = async () => {
