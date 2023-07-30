@@ -165,7 +165,7 @@ export default function HomeComponent() {
     try {
       const tx = await sba.executeCall(
         NFT_MINTABLE, // to
-        0n,         // value
+        BigInt('0'),         // value
         nftMintableIface.encodeFunctionData(
           "safeMint",
           [sba.address],
@@ -247,7 +247,7 @@ export default function HomeComponent() {
     try {
       const tx = await sba.executeCall(
         SBAManagerAddress, // to
-        0n,         // value
+        BigInt('0'),         // value
         SBAManagerIface.encodeFunctionData(
           "spendSomeCredits",
           [ethers.utils.parseEther('1')],
