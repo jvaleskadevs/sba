@@ -1,0 +1,27 @@
+
+.footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap:1rem;
+}
+.icons_container{
+	display: flex;
+	gap: 2rem;
+	margin-bottom: .5rem;
+}
+
+.get_started{
+	font-size: 18px;
+
+}
+
+.get_started span{
+	color: #992299;
+  height: 36px;
+
+  background: rgba(1, 1, 1, 0.08);
+  border-radius: 8px;
+	padding: .33rem .66rem .33rem .66rem;
+	margin-left: .3rem;
+}

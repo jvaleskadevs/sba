@@ -1,0 +1,21 @@
+{
+	"name": "sba",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"build": "npx hardhat compile",
+		"deploy": "npx hardhat run ./scripts/deploy.js --network alfajores",
+		"deploy-mainnet": "npx hardhat run ./scripts/deploy.js --network celo",
+		"node": "npx hardhat node",
+		"deploy-local": "npx hardhat run ./scripts/deploy.js --network localhost"
+	},
+	"devDependencies": {
+		"@nomicfoundation/hardhat-toolbox": "^1.0.2",
+		"@openzeppelin/contracts": "^4.9.2",
+		"dotenv": "^16.0.2",
+		"hardhat": "^2.10.1"
+	},
+	"dependencies": {
+		"@superfluid-finance/ethereum-contracts": "^1.7.1"
+	}
+}
