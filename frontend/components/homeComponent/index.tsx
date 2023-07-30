@@ -169,7 +169,7 @@ export default function HomeComponent() {
         nftMintableIface.encodeFunctionData(
           "safeMint",
           [sba.address],
-          0n
+          BigInt('0')
         ) // calldata
       );
       
@@ -251,7 +251,7 @@ export default function HomeComponent() {
         SBAManagerIface.encodeFunctionData(
           "spendSomeCredits",
           [ethers.utils.parseEther('1')],
-          0n
+          BigInt('0')
         ) // calldata
       );
       
