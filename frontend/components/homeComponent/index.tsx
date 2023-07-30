@@ -11,10 +11,6 @@ import { SBAABI } from "../../artifacts/SBAABI";
 import { SBAManagerABI } from "../../artifacts/SBAManagerABI";
 import styles from "./homeComponent.module.css";
 
-interface Window {
-    ethereum: any
-}
-
 export default function HomeComponent() {
   const [SBA, setSBA] = useState<string>('');
   const [outflow, setOutflow] = useState<object|null>(null);
