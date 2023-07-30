@@ -19,7 +19,7 @@ export default function HomeComponent() {
   const { address } = useAccount();
   const { open, setOpen } = useModal();
   
-  const setOpen_ = (_: boolean) => {
+  const setOpen_ = () => {
     return setOpen(!open);
   }
   
