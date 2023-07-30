@@ -182,7 +182,7 @@ export default function HomeComponent() {
   
   const getNftMintableInterface = () => {
     const ERC721MintableABI = ["function safeMint(address to) public"];
-    return new ethers.utils.Interface(ERC721MintableABI);
+    return new ethers.utils.Interface(ERC721MintableABI) as any;
   }
   
   
@@ -242,7 +242,7 @@ export default function HomeComponent() {
     const SBAManagerAddress = outflow.metadata.token_symbol === 'CELOx' 
       ? "0x7Dc01c36d8fd3e8104f818091D90F74710AEac2f"  // CELOx SBAM
       : "0x1dF2013adCadFab51D7233547c78331f23B03e04"; // G$ SBAM
-    const SBAManagerIface = new ethers.utils.Interface(SBAManagerABI);
+    const SBAManagerIface = new ethers.utils.Interface(SBAManagerABI) as any;
     
     try {
       const tx = await sba.executeCall(
