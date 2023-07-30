@@ -9,15 +9,16 @@ export async function POST(req: Request) {
 		return NextResponse.json({ error: 'Only POST method allowed' }, { status: 500 })
 	}
 	
+	
   //const testAddressFromCeloExplorer = "0xEa21171f79a19338bF608ffa1c64dE0B33F0Ab19";
   try {
+    const requestHeaders: HeadersInit = new Headers();
+    requestHeaders.set('x-api-key', process.env.NEXT_PUBLIC_TAT);
     const resp = await fetch(
       `https://api.tatum.io/v3/nft/address/balance/CELO/${address}`,
       {
         method: 'GET',
-        headers: {
-          'x-api-key': process.env.NEXT_PUBLIC_TAT
-        }
+        headers: requestHeaders
       }
     );
 
