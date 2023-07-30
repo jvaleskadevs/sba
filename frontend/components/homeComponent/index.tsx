@@ -66,7 +66,7 @@ export default function HomeComponent() {
             // Subscription validation
             // the outflowNFT must match our dapp requirements
             if (outflow.metadata.sender // the user
-              === address.toLowerCase() &&
+              === address?.toLowerCase() &&
                 outflow.metadata.receiver // the dapp
                   === "0x7dc01c36d8fd3e8104f818091d90f74710aeac2f" && 
                     outflow.metadata.chain_id // Celo chainId
