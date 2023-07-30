@@ -21,7 +21,7 @@ export default function HomeComponent() {
   
   const walletManager = useMemo(() => ({
     isOpen: open,
-    open: setOpen
+    open: setOpen(open)
   }), [open, setOpen]); 
 
   const fetchNfts = async () => {
