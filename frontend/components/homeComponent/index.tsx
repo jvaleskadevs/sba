@@ -77,7 +77,7 @@ export default function HomeComponent() {
                               === "0x671425ae1f272bc6f79bec3ed5c4b00e9c628240" && 
                                 outflow.metadata.token_symbol // CELOx symbol
                                   === "CELOx" &&
-                                    outflow.metadata.flowRate as Number // minFlowRate
+                                    outflow.metadata.flowRate as number // minFlowRate
                                       >= 31709791983) {
               // it is our Superfluid subscription outflow nft
               console.log('outflow-subscription');
