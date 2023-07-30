@@ -6,7 +6,7 @@ export async function POST(req: Request) {
 	const { metadataUri } = body;
 	
 	if (req.method !== 'POST') {
-		return new Response({status: 500, message: 'Only POST method allowed'});
+		return NextResponse.json({ error: 'Only POST method allowed' }, { status: 500 })
 	}
 
   try {
@@ -23,6 +23,6 @@ export async function POST(req: Request) {
 		});
   } catch (err) {
     console.warn(err);
-    return new Response({status: 500, message: err.message});
+    return NextResponse.json({ error: err.message }, { status: 500 })
   }
 }
