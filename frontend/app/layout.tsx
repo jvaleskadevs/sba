@@ -16,7 +16,7 @@ const { chains } = configureChains(
 const config = createConfig(
   getDefaultConfig({
     // Required API Keys
-    walletConnectProjectId: process.env.NEXT_PUBLIC_WC,
+    walletConnectProjectId: process.env.NEXT_PUBLIC_WC ?? '',
     
     chains: chains,
 
