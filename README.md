@@ -34,6 +34,19 @@ This folder includes our contracts and some config files like the Hardhat one bu
 ## About the fronted folder
 This folder contains our dapp. Our dapp allows anyone to call our SBAM and create SBAs trough the Superfluid subscription widget on the Celo blockhain.
 
+## Contracts and importants links
+
+- SBA controlled by Deployer EOA (42 G$): 0xB2E65F8F38097Ca2c0C355D0c1F9312eC62A7731
+- SBA controlled by Deployer EOA (42 CELOx): 0x7BA196C575B02734504b21b8dD4260634974A211
+- SBAM (G$): 0x1dF2013adCadFab51D7233547c78331f23B03e04
+- SBAM (CELOx): 0x7Dc01c36d8fd3e8104f818091D90F74710AEac2f
+- Outflow NFT (G$): 0xc09c8d5c1f1325ed2d33b1153dc75edf76f080e7
+- ERC6551 Registry: 0x34e1408B9B047fE12a1B0C655B2D58775AcF579A
+- SBA implementation: 0x8f8574060f3682408d75a7Fbc86e8e51bc806Fc8
+- J. Valeska on Celo NFT collection: 0x6008dBE25d0a7fC93eD0D514a878d2dE98d0b5D2
+- Deployer EOA: 0xc392302FfF674EF5c2c3DD59210eC0FeDd4D2acf
+- J. Valeska on Celo NFT collection on TofuNFT: https://tofunft.com/nft/celo/0x6008dBE25d0a7fC93eD0D514a878d2dE98d0b5D2/4
+
 ## Contributions && Development
 - Clone the repository:
 ```
